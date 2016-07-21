@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Adding a doctype for Noah -->
+<html>
+  <head>
+    <title>Pixel Art</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      #backdrop {
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        /* -------------------------- */
+        /* Do not modify this section */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        /* -------------------------- */
+      }
+      /* -------------------*/
+      /* Do not modify this */
+      #grid {
+        display: table;
+      }
+      .row {
+        display: table-row;
+      }
+      /* -------------------*/
+      .cell {
+        display: table-cell;
+        width: 100px;
+        height: 100px;
+        background-color: black;-
+        border: thin solid grey;
+      }
+      .cell.white {
+        background-color: white;
+      }
+      .cell.blue {
+        background-color: blue;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="backdrop">
+      <div class="grid">
+        <div class="row">
+          <div class="cell white"></div>
+          <div class="cell"></div>
+          <div class="cell blue"></div>
+        <div class="row">
+          <div class="cell white"></div>
+          <div class="cell"></div>
+          <div class="cell blue"></div>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
