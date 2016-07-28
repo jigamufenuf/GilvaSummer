@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <script>
+    alert("So I heard you want your tip calculated.");
+    alert("I can do that");
+    var total = prompt("What is the total amount you have to pay?");
+    var tip = prompt("Now how much do you want to tip? Keep in mind, the average tip is around 18%");
+    var people = prompt("Finally, how many people are splitting the bill? (I.E. if there are three people splitting, type 3)");
+    alert("That means your tip (per person) should be $" + tip/100*total/people + " meaning you/everyone must pay $" + (total/people + tip/100*total/people) + ".");
+    
+    </script>
+  </body>
+</html>
