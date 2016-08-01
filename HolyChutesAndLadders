@@ -29,15 +29,99 @@ face5.src="d6.gif"
 </form>
 <script>
 var randomdice;
+var succ;
+var nerp = 1;
 function throwdice(){
 var randomdice=Math.round(Math.random()*5)
 document.images["mydice"].src=eval("face"+randomdice+".src")
 var succ = randomdice + 1;
 alert("You rolled a/an " +succ+ ". Move that many spaces.");
 
-console.log(succ);
+nerp = nerp + succ;
+
+console.log(nerp);
+
+	if(nerp == 3){
+		alert("You have climed a ladder to space 21!");
+		nerp = 21;
+		console.log(nerp);
+	}
+	else if(nerp == 8){
+		alert("You have climed a ladder to space 30!");
+		nerp = 30;
+		console.log(nerp);
+	}
+	else if(nerp == 17){
+		alert("A snake has caused you to go to space 13!");
+		nerp = 13;
+		console.log(nerp);
+	}
+	else if(nerp == 28){
+		alert("You have climed a ladder to space 84!");
+		nerp = 84;
+		console.log(nerp);
+	}
+	else if(nerp == 52){
+		alert("A snake has caused you to go to space 29!");
+		nerp = 29;
+		console.log(nerp);
+	}
+	else if(nerp == 57){
+		alert("A snake has caused you to go to space 40!");
+		nerp = 40;
+		console.log(nerp);
+	}
+	else if(nerp == 62){
+		alert("A snake has caused you to go to space 22!");
+		nerp = 22;
+		console.log(nerp);
+	}
+	else if(nerp == 75){
+		alert("You have climed a ladder to space 86!");
+		nerp = 86;
+		console.log(nerp);
+	}
+	else if(nerp == 80){
+		alert("You have climed a ladder to space 100 and have won the game!");
+		nerp = 100;
+		console.log(nerp);
+	}
+	else if(nerp == 88){
+		alert("A snake has caused you to go to space 18!");
+		nerp = 18;
+		console.log(nerp);
+	}
+	else if(nerp == 90){
+		alert("You have climed a ladder to space... 91.");
+		nerp = 91;
+		console.log(nerp);
+	}
+	else if(nerp == 95){
+		alert("A snake has caused you to go to space 70!");
+		nerp = 70;
+		console.log(nerp);
+	}
+	else if(nerp == 98){
+		alert("A snake has caused you to go to space 79! You were so close too!");
+		nerp = 79;
+		console.log(nerp);
+	}
+	else if(nerp == 100){
+		alert("Congrats! You win!");
+		nerp = 100;
+		console.log(nerp);
+	}
+	else if(nerp > 100){
+		alert("Either you need to roll the exact amount to get to 100, or you already won!");
+		nerp = 100;
+		console.log(nerp);
+	}
+
+
+
 
 }
+
 
     </script>
   </body>
