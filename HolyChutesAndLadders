@@ -28,8 +28,8 @@ face5.src="d6.gif"
 <input type="button" value="Throw die!" onClick="throwdice()">
 </form>
 <script>
+var randomdice;
 function throwdice(){
-//create a random integer between 0 and 5
 var randomdice=Math.round(Math.random()*5)
 document.images["mydice"].src=eval("face"+randomdice+".src")
 var succ = randomdice + 1;

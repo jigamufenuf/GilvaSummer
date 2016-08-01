@@ -1,58 +1,674 @@
 <html>
   <head>
-    <style>
-      body {
-        font-family: Helvetica;
-        text-align: center;
-      }
-      #card {
-        width: 500px;
-        padding: 200px 0;
-        margin: 50px auto;
-        border: 5px solid darkseagreen;
-        border-radius: 5px;
-        font-size: 18px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="card"></div>
-    <input type="text" id="answer" autofocus/>
-    <button onclick="checkAnswer();">Answer</button>
-
+  <form>
+  <input type="button" value="Generate Random Pairing" onClick="randomBing()">
+  </form>
     <script>
-      var currentCard = -1;
-      var questions = [
-        "Who am I?",
-        "What is the name of 'Super Mario Bros.'?",
-        "How much wood could a wood chuck chuck if a wood chuck could chuck wood?"
-      ];
-      var answers = [
-        "Alex",
-        "Super Mario Bros.",
-        "Green"
-      ];
-      function checkAnswer() {
-        var correctAnswer = answers[currentCard];
-        var answerInput = document.getElementById("answer");
-        var answer = answerInput.value;
-        if (answer.toLowerCase() == correctAnswer.toLowerCase()) {
-          alert("Yep!")
-        } else {
-          alert("Nope")
-        }
-        showNextCard();
+    alert("Please check the JavaScript console in your browser for the bingo cards!");
+
+    //B Varibles
+    var bRandom=Math.round(Math.random()*2) + 1;
+    var b2Random=Math.round(Math.random()*2) + 4;
+    var b3Random=Math.round(Math.random()*2) + 7;
+    var b4Random=Math.round(Math.random()*2) + 10;
+    var b5Random=Math.round(Math.random()*2) + 13;
+
+    var bbRandom=Math.round(Math.random()*2) + 1;
+    var bb2Random=Math.round(Math.random()*2) + 4;
+    var bb3Random=Math.round(Math.random()*3) + 7;
+    var bb4Random=Math.round(Math.random()*2) + 11;
+    var bb5Random=Math.round(Math.random()*2) + 13;
+
+    //I Varibles
+    var iRandom=Math.round(Math.random()*3) + 16;
+    var i2Random=Math.round(Math.random()*2) + 20;
+    var i3Random=Math.round(Math.random()*2) + 23;
+    var i4Random=Math.round(Math.random()*2) + 26;
+    var i5Random=Math.round(Math.random()*1) + 29;
+
+    var iiRandom=Math.round(Math.random()*3) + 16;
+    var ii2Random=Math.round(Math.random()*2) + 20;
+    var ii3Random=Math.round(Math.random()*2) + 23;
+    var ii4Random=Math.round(Math.random()*2) + 26;
+    var ii5Random=Math.round(Math.random()*1) + 29;
+
+    //N Varibles
+    var nRandom=Math.round(Math.random()*4) + 31;
+    var n2Random=Math.round(Math.random()*4) + 36;
+    var n3Random=Math.round(Math.random()*4) + 41;
+    var n4Random=Math.round(Math.random()*4) + 46;
+
+    var nnRandom=Math.round(Math.random()*4) + 31;
+    var nn2Random=Math.round(Math.random()*4) + 36;
+    var nn3Random=Math.round(Math.random()*4) + 41;
+    var nn4Random=Math.round(Math.random()*4) + 46;
+
+    //G Varibles
+    var gRandom=Math.round(Math.random()*3) + 46;
+    var g2Random=Math.round(Math.random()*2) + 50;
+    var g3Random=Math.round(Math.random()*2) + 53;
+    var g4Random=Math.round(Math.random()*2) + 56;
+    var g5Random=Math.round(Math.random()*1) + 59;
+
+    var ggRandom=Math.round(Math.random()*3) + 46;
+    var gg2Random=Math.round(Math.random()*2) + 50;
+    var gg3Random=Math.round(Math.random()*2) + 53;
+    var gg4Random=Math.round(Math.random()*2) + 56;
+    var gg5Random=Math.round(Math.random()*1) + 59;
+
+    //O Varibles
+    var oRandom=Math.round(Math.random()*3) + 61;
+    var o2Random=Math.round(Math.random()*2) + 65;
+    var o3Random=Math.round(Math.random()*2) + 68;
+    var o4Random=Math.round(Math.random()*2) + 71;
+    var o5Random=Math.round(Math.random()*1) + 74;
+
+    var ooRandom=Math.round(Math.random()*3) + 61;
+    var oo2Random=Math.round(Math.random()*2) + 65;
+    var oo3Random=Math.round(Math.random()*2) + 68;
+    var oo4Random=Math.round(Math.random()*2) + 71;
+    var oo5Random=Math.round(Math.random()*1) + 74;
+
+    console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+
+    var bingLetters = ["B", "I", "N", "G", "O"];
+    //Random Letter/Number Combo
+    function randomBing(){
+    var bingChing = bingLetters[Math.floor(Math.random() * bingLetters.length)];
+
+
+    //If Random letter is B
+    if(bingChing == "B"){
+    var bingNumbers=Math.round(Math.random()*14) + 1
+    console.log(bingChing + " " + bingNumbers);
+
+      if(bingNumbers == bRandom){
+        bRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
       }
-      function showNextCard() {
-        if (currentCard < questions.length - 1) {
-          currentCard = currentCard + 1;
-          var cardDiv = document.getElementById("card");
-          cardDiv.textContent = questions[currentCard];
-          var answerInput = document.getElementById("answer");
-          answerInput.value = "";
-        }
+      else if(bingNumbers == b2Random){
+        b2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
       }
-      showNextCard();
+
+      else if(bingNumbers == b3Random){
+        b3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+    }
+
+      else if(bingNumbers == b4Random){
+        b4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == b5Random){
+        b5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+    //PLAYER 2
+
+    else if(bingNumbers == bbRandom){
+      bbRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+    else if(bingNumbers == bb2Random){
+      bb2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+    else if(bingNumbers == bb3Random){
+      bb3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == bb4Random){
+        bb4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == bb5Random){
+        bb5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+
+
+
+
+      //Random Letter is N
+    }
+     else if(bingChing == "N"){
+    var bingNumbers=Math.round(Math.random()*14) + 31
+    console.log(bingChing + " " + bingNumbers);
+
+    if(bingNumbers == nRandom){
+        nRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+
+      else if(bingNumbers == n2Random){
+        n2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == n3Random){
+        n3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == n4Random){
+        n4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      //PLAYER 2
+
+      else if(bingNumbers == nnRandom){
+        nnRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == nn2Random){
+        nn2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == nn3Random){
+        nn3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == nn4Random){
+        nn4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+    }
+
+    //Random Letter is I
+
+      else if(bingChing == "I"){
+    var bingNumbers=Math.round(Math.random()*14) + 16
+    console.log(bingChing + " " + bingNumbers);
+
+    if(bingNumbers == iRandom){
+        iRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+   else if(bingNumbers == i2Random){
+        i2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == i3Random){
+        i3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == i4Random){
+        i4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == i5Random){
+        i5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+        //PLAYER 2
+
+
+     else if(bingNumbers == iiRandom){
+        iiRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+   else if(bingNumbers == ii2Random){
+        ii2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == ii3Random){
+        ii3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == ii4Random){
+        ii4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      else if(bingNumbers == ii5Random){
+        ii5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      
+    }
+
+      //Random Letter is G
+     else if(bingChing == "G"){
+    var bingNumbers=Math.round(Math.random()*14) + 46
+    console.log(bingChing + " " + bingNumbers);
+
+    if(bingNumbers == gRandom){
+        gRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == g2Random){
+        g2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == g3Random){
+        g3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == g4Random){
+        g4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == g5Random){
+        g5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      //player 2
+
+      else if(bingNumbers == ggRandom){
+        ggRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == gg2Random){
+        gg2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == gg3Random){
+        gg3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == gg4Random){
+        gg4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == gg5Random){
+        gg5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      //Random Letter is O
+     } else if(bingChing == "O"){
+    var bingNumbers=Math.round(Math.random()*14) + 61
+    console.log(bingChing + " " + bingNumbers);
+
+    if(bingNumbers == oRandom){
+        oRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == o2Random){
+        o2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == o3Random){
+        o3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == o4Random){
+        o4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == o5Random){
+        o5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+
+      //player 2
+
+      else if(bingNumbers == ooRandom){
+        ooRandom = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == oo2Random){
+        oo2Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == oo3Random){
+        oo3Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == oo4Random){
+        oo4Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+      else if(bingNumbers == oo5Random){
+        oo5Random = "x";
+        console.log("|B  I  N  G  O|    |B  I  N  G  O|");
+    console.log("|" + bRandom + "|" + iRandom + "|" + nRandom + "|" + gRandom + "|" + oRandom + "|    |" + bbRandom + "|" + iiRandom + "|" + nnRandom + "|" + ggRandom + "|" + ooRandom + "|");
+    console.log("|"+b2Random + "|" + i2Random + "|" + n2Random+ "|" + g2Random + "|" + o2Random + "|    |" + bb2Random + "|" + ii2Random + "|" + nn2Random + "|" + gg2Random + "|" + oo2Random + "|");
+    console.log("|" + b3Random + "|" + i3Random + "|f|" + g3Random + "|" + o3Random + "|     |" + bb3Random + "|" + ii3Random + "|f|" + gg3Random + "|" + oo3Random + "|");
+    console.log("|" + b4Random + "|" + i4Random + "|" + n3Random + "|" + g4Random + "|" + o4Random + "|   |" + bb4Random + "|" + ii4Random + "|" + nn3Random + "|" + gg4Random + "|" + oo4Random + "|");
+    console.log("|" + b5Random + "|" + i5Random + "|" + n4Random + "|" + g5Random + "|" + o5Random + "|   |" + bb5Random + "|" + ii5Random + "|" + nn4Random + "|" + gg5Random + "|" + oo5Random + "|");
+      }
+     } 
+
+     //You win you f u c k
+
+     if(bRandom == "x" && b2Random == "x" && b3Random == "x" && b4Random == "x" && b5Random == "x"){
+      alert("Bingo");
+     }
+     else if(iRandom == "x" && i2Random == "x" && i3Random == "x" && i4Random == "x" && i5Random == "x"){
+      alert("Bingo");
+     }
+     else if(nRandom == "x" && n2Random == "x" && n3Random == "x" && n4Random == "x"){
+      alert("Bingo");
+     }
+     else if(gRandom == "x" && g2Random == "x" && g3Random == "x" && g4Random == "x" && g5Random == "x"){
+      alert("Bingo");
+     }
+     else if(oRandom == "x" && o2Random == "x" && o3Random == "x" && o4Random == "x" && o5Random == "x"){
+      alert("Bingo");
+     }
+     else if(bRandom == "x" && iRandom == "x" && nRandom == "x" && gRandom == "x" && oRandom == "x"){
+      alert("Bingo");
+     }
+     else if(b2Random == "x" && i2Random == "x" && n2Random == "x" && g2Random == "x" && o2Random == "x"){
+      alert("Bingo");
+     }
+     else if(b3Random == "x" && i3Random == "x" && g3Random == "x" && o3Random == "x"){
+      alert("Bingo");
+     }
+     else if(b4Random == "x" && i4Random == "x" && n3Random == "x" && g4Random == "x" && o4Random == "x"){
+      alert("Bingo");
+     }
+     else if(b5Random == "x" && i5Random == "x" && n4Random == "x" && g5Random == "x" && o5Random == "x"){
+      alert("Bingo");
+     }
+     else if(bRandom == "x" && i2Random == "x" && g4Random == "x" && o5Random == "x"){
+      alert("Bingo");
+     }
+     else if(b5Random == "x" && i4Random == "x" && g2Random == "x" && oRandom == "x"){
+      alert("Bingo");
+     }
+
+     //Player 2
+
+     else if(bbRandom == "x" && bb2Random == "x" && bb3Random == "x" && bb4Random == "x" && bb5Random == "x"){
+      alert("Bingo");
+     }
+     else if(iiRandom == "x" && ii2Random == "x" && ii3Random == "x" && ii4Random == "x" && ii5Random == "x"){
+      alert("Bingo");
+     }
+     else if(nnRandom == "x" && nn2Random == "x" && nn3Random == "x" && nn4Random == "x"){
+      alert("Bingo");
+     }
+     else if(ggRandom == "x" && gg2Random == "x" && gg3Random == "x" && gg4Random == "x" && gg5Random == "x"){
+      alert("Bingo");
+     }
+     else if(ooRandom == "x" && oo2Random == "x" && oo3Random == "x" && oo4Random == "x" && oo5Random == "x"){
+      alert("Bingo");
+     }
+     else if(bbRandom == "x" && iiRandom == "x" && nnRandom == "x" && ggRandom == "x" && ooRandom == "x"){
+      alert("Bingo");
+     }
+     else if(bb2Random == "x" && ii2Random == "x" && nn2Random == "x" && gg2Random == "x" && oo2Random == "x"){
+      alert("Bingo");
+     }
+     else if(bb3Random == "x" && ii3Random == "x" && gg3Random == "x" && oo3Random == "x"){
+      alert("Bingo");
+     }
+     else if(bb4Random == "x" && ii4Random == "x" && nn3Random == "x" && gg4Random == "x" && oo4Random == "x"){
+      alert("Bingo");
+     }
+     else if(bb5Random == "x" && ii5Random == "x" && nn4Random == "x" && gg5Random == "x" && oo5Random == "x"){
+      alert("Bingo");
+     }
+     else if(bbRandom == "x" && ii2Random == "x" && gg4Random == "x" && oo5Random == "x"){
+      alert("Bingo");
+     }
+     else if(bb5Random == "x" && ii4Random == "x" && gg2Random == "x" && ooRandom == "x"){
+      alert("Bingo");
+     }
+
+        
+}
     </script>
-  </body>
+  </head>
 </html>
